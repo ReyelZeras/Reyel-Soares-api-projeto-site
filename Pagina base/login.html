@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/login.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <div id="container_geral">
+        <div class="container_esquerda">
+            <div class="pelicula"></div>
+            <h1>ColorFul Life</h1>
+            <input type="checkbox" id="check">
+            <label for="check" id="icone"><img src="./imagens/icone lateral/icone.png" alt=""></label>
+            <div class="barra">
+                <nav>
+                    <a href="colorhome.html">
+                        <div class="link">Home</div>
+                    </a>
+                    <a href="Pagina_de_Servico_Matheus.html">
+                        <div class="link">Serviços</div>
+                    </a>
+                    <a href="sobre.html">
+                        <div class="link">Sobre nós</div>
+                    </a>
+                    <a href="time.html">
+                        <div class="link">Time</div>
+                    </a>
+                    <a href="Contato.html">
+                        <div class="link">Contato</div>
+                    </a>
+                    - <a href="cadastro.html">
+                        <div class="link">Cadastro</div>
+                    </a>
+                    <a href="">
+                        <div class="link">Login</div>
+                    </a>
+                </nav>
+            </div>
+        </div>
+
+        <div class="container_direita">
+
+
+            <div class="opcoes_login">
+
+                <h1>Bem vindo(a) de volta! Entre com:</h1>
+                <div id="icone_redessociais">
+                    <button onclick="google()" class="bt_google"></button>
+                    <button onclick="facebook()" class="bt_facebook"></button>
+                    <button onclick="github()" class="bt_github"></button>
+                </div>
+
+                <fieldset>
+                    <legend>Ou</legend>
+                </fieldset>
+            </div>
+
+            <div class="formulario">
+                <form>
+                    <h2>Email</h2>
+                    <input class="input_padrao" type="text" placeholder="Email" autofocus>
+
+                    <h2>Senha</h2>
+                    <input class="input_padrao" type="text" placeholder="Senha">
+
+                    <div id="bt-e-esquecisenha">
+                        <h2 class="h2_esqueciasenha" onclick="esqueci()">Esqueci senha</h2>
+
+                        <button class="btn_entrar" onclick="entrar()">Entrar</button>
+
+                    </div>
+
+                </form>
+                <div id="linhafinal">
+                    
+                </div>
+            </div>
+
+        </div>
+
+
+
+    </div>
+</body>
+
+</html>

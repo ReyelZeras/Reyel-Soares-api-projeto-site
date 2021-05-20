@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="./css/cadastro.css">
+</head>
+
+<body>
+
+
+
+
+    <div id="container_geral">
+        <!-- Lado esquerdo da tela:
+    - Imagem de fundo;
+    - Nome da empresa;
+    - Pelicula para escurecer a imagem -->
+        <div class="container_esquerda">
+            <div class="pelicula"></div>
+            <h1>ColorFul Life</h1>
+            <input type="checkbox" id="check">
+            <label for="check" id="icone"><img src="./imagens/icone lateral/icone.png" alt=""></label>
+            <div class="barra">
+                <nav>
+                    <a href="colorhome.html">
+                        <div class="link">Home</div>
+                    </a>
+                    <a href="Pagina_de_Servico_Matheus.html">
+                        <div class="link">Serviços</div>
+                    </a>
+                    <a href="sobre.html">
+                        <div class="link">Sobre nós</div>
+                    </a>
+                    <a href="time.html">
+                        <div class="link">Time</div>
+                    </a>
+                    <a href="Contato.html">
+                        <div class="link">Contato</div>
+                    </a>
+                    <a href="">
+                        <div class="link">Cadastro</div>
+                    </a>
+                    <a href="login.html">
+                        <div class="link">Login</div>
+                    </a>
+                </nav>
+            </div>
+        </div>
+
+
+        <div id="cadastro_parte1" style="display: block;" class="container_direita">
+            <!-- Lado direito da tela - Parte 1 Cadastro:
+    - Imagem para indicar o andamento do cadastro;
+    - Saudações;
+    - Formas de cadastro (Google, facebook, github);
+    - Formulário de cadastro parte 1;
+    - Botão avançar; -->
+            <div class="progresso_cadastro"></div>
+
+            <div class="opcoes_cadastro">
+
+                <h2>Bem Vindo(a)! Comece com:</h2>
+                <div id="icone_redessociais">
+                    <button onclick="google()" class="bt_google"></button>
+                    <button onclick="facebook()" class="bt_facebook"></button>
+                    <button onclick="github()" class="bt_github"></button>
+                </div>
+
+                <fieldset>
+                    <legend>Ou</legend>
+                </fieldset>
+            </div>
+
+            <div class="formulario1">
+                <form>
+                    <p class="campo">Nome Completo</p>
+                    <input type="text" class="input_cadastro_parte1" placeholder="Nome e sobrenome">
+
+                    <p class="campo">E-mail</p>
+                    <input type="text" class="input_cadastro_parte1" placeholder="Seu e-mail">
+
+                    <p class="campo">Senha</p>
+                    <input type="password" class="input_cadastro_parte1" placeholder="Sua senha">
+
+                    <fieldset>
+                        <legend>Tipo de conta</legend>
+                    </fieldset>
+                    <div class="checkbox">
+                        <input id="radio_paciente" name="tipo_conta" value="paciente" type="radio"><b>Paciente</b>
+                        <input id="radio_profissional" name="tipo_conta" value="profissional"
+                            type="radio"><b>Profissional</b>
+                    </div>
+                    <button type="button" onclick="btn_avancar()" class="btn_padrao"><b>Próximo</b></button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Lado direito da tela - Parte 2 Cadastro Paciente:
+    - Imagem para indicar o andamento do cadastro;
+    - Formulário de cadastro parte 2;
+    - Botão "voltar";
+    - Botão "avançar". -->
+
+
+        <div id="cadastro_paciente" style="display: none;" class="container_direita">
+            <div class="progresso_paciente"></div>
+            <div class="box_cadastro">
+                <div class="formulario_paciente">
+
+                    <form>
+                        <p class="campo">CPF:</p>
+                        <input type="number" class="input_cadastro_paciente" placeholder="Digite o cpf">
+
+
+                        <p class="campo">Data de Nascimento:</p>
+                        <input type="date" class="input_cadastro_paciente" placeholder="Sua senha">
+
+                        <div id="selects_paciente">
+                            <div id="caixa-sex-grau2">
+                                <p class="campo">Grau do autismo:</p>
+                                <select class="select_cadastro_paciente" id="grau_autismo">
+                                    <option value="">-- Selecione o nível do autismo --</option>
+                                    <option value="1">Leve (nível 1)</option>
+                                    <option value="2">Moderado (nível 2)</option>
+                                    <option value="3">Severo (nível 3)</option>
+                                </select>
+                            </div>
+                            <div id="caixa-sex-grau1">
+                                <p class="campo">Sexo:</p>
+                                <select class="select_cadastro_paciente" id="sexo">
+                                    <option value="">-- Selecione o Sexo --</option>
+                                    <option value="1">Masculino</option>
+                                    <option value="2">Feminino</option>
+                                    <option value="3">Outro</option>
+                                    <option value="4">Prefiro não informar</option>
+                                </select>
+                            </div>
+                            
+                        </div>
+
+                        <button onclick="btn_voltar()" type="button" class="btn_padrao"><b>Voltar</b></button>
+                        <button onclick="btn_avancar2()" type="button" class="btn_padrao"><b>Próximo</b></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Lado direito da tela - Parte 2 Cadastro Profissional:
+    - Imagem para indicar o andamento do cadastro;
+    - Formulário de cadastro parte 2;
+    - Botão "voltar";
+    - Botão "avançar". -->
+
+        <div id="cadastro_profissional" style="display: none;" class="container_direita">
+            <div class="progresso_profissional"></div>
+
+            <div class="box_cadastro">
+                <div class="formulario_profissional">
+
+                    <form>
+                        <p class="campo">CPF:</p>
+                        <input type="number" class="input_cadastro_profissional" placeholder="CPF">
+                        
+                        <p class="campo">CRM:</p>
+                        <input type="number" class="input_cadastro_profissional" placeholder="CPF">
+                        
+                        <p class="campo">Profissão:</p>
+                        <input type="number" class="input_cadastro_profissional" placeholder="CPF">
+
+                        <p class="campo">Data de Nascimento:</p>
+                        <input type="date" class="input_cadastro_profissional" placeholder="Sua senha">
+
+                        <p class="campo">Sexo:</p>
+                        <select class="select_padrao_profissional" id="sexo">
+                            <option value="">-- Selecione o Sexo --</option>
+                            <option value="1">Masculino</option>
+                            <option value="2">Feminino</option>
+                            <option value="3">Outro</option>
+                            <option value="4">Prefiro não informar</option>
+                        </select>
+                        
+                        <div>
+                            <button type="button" onclick="btn_voltar2()" class="btn_padrao"><b>Voltar</b></button>
+                        <button type="button" onclick="btn_avancar3()" class="btn_padrao"><b>Próximo</b></button>
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lado direito da tela - Parte 3 Endereço:
+    - Imagem para indicar o andamento do cadastro;
+    - Formulário de cadastro parte 3 - Endereço;
+    - Botão "voltar";
+    - Botão "finalizar". -->
+
+        <div id="cadastro_endereco" style="display: none;" class="container_direita">
+            <div class="progresso_cadastro3"></div>
+
+            <div class="box_cadastro">
+                <div class="formulario3">
+                    <h1>Endereço</h1>
+                    <form>
+                        <p class="campo">Estado:</p>
+                        <input type="text" class="input_cadastro_parte3" placeholder="Estado">
+
+                        <p class="campo">Cidade:</p>
+                        <input type="text" class="input_cadastro_parte3" placeholder="Cidade">
+
+                        <p class="campo">CEP:</p>
+                        <input type="text" class="input_cadastro_parte3" placeholder="CEP">
+
+                        <p class="campo">Bairro:</p>
+                        <input type="text" class="input_cadastro_parte3" placeholder="Bairro">
+
+                        <p class="campo">Rua:</p>
+                        <input type="text" class="input_cadastro_parte3" placeholder="Rua">
+
+                        <p class="campo">Número:</p>
+                        <input type="text" class="input_cadastro_parte3" placeholder="Número">
+
+                        <p class="campo">Complemento:</p>
+                        <input type="text" class="input_cadastro_parte3" placeholder="Complemento">
+
+
+
+                        <button type="button" onclick="btn_voltar3()" class="btn_padrao"><b>Voltar</b></button>
+                        <button onclick="btn_avancar3()" class="btn_padrao"><b>Finalizar</b></button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+</body>
+
+</html>
+
+
+
+
+<Script>
+
+    // Botão cadastro parte 1:
+
+    function btn_avancar() {
+
+        if (radio_paciente.checked) {
+
+            cadastro_parte1.style.display = "none";
+            cadastro_paciente.style.display = "block";
+
+        } else if (radio_profissional.checked) {
+
+            cadastro_parte1.style.display = "none";
+            cadastro_profissional.style.display = "block";
+
+        } else {
+            alert("Selecione o tipo de conta");
+        }
+
+    }
+
+    // Botões cadastro paciente:
+
+    function btn_avancar2() {
+
+        cadastro_paciente.style.display = "none";
+        cadastro_endereco.style.display = "block";
+
+    }
+
+    function btn_voltar() {
+
+        cadastro_parte1.style.display = "block";
+        cadastro_paciente.style.display = "none";
+
+    }
+
+    // Botões cadastro profissional:
+
+    function btn_avancar3() {
+
+        cadastro_profissional.style.display = "none";
+        cadastro_endereco.style.display = "block";
+
+    }
+
+    function btn_voltar2() {
+
+        cadastro_parte1.style.display = "block";
+        cadastro_profissional.style.display = "none";
+
+    }
+
+    // Botões cadastro endereço:
+
+    function btn_avancar4() {
+
+    }
+
+    function btn_voltar3() {
+
+        cadastro_parte1.style.display = "block";
+        cadastro_endereco.style.display = "none";
+
+    }
+
+
+</Script>

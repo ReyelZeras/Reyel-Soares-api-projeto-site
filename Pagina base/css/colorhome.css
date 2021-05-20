@@ -1,0 +1,325 @@
+
+*{
+    margin:0;
+    padding:0;
+}
+
+body{
+    margin:  0px;
+    padding: 0px;
+    width:  100%;
+    height:100vh;
+    background-image: linear-gradient(to bottom right, #BF38B2 50%, #FDC818  50%);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-repeat: no-repeat;
+
+}
+
+.cabeçalho{
+    text-align: center;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color: white;
+    font-size: 40px;
+}
+
+#check {
+    display: none;
+}
+
+#icone{
+    background-color: none;
+    cursor: pointer;
+    padding: 15px;
+    position: absolute;
+    z-index: 1;
+}
+
+.barra{
+    background-color: rgba(51, 51, 51, 0.527);
+    height: 100%;
+    width: 300px;
+    position: absolute;
+    transition: all .2s linear;
+    left: -300px;
+    margin: 0;
+}
+
+nav{
+    width: 100%;
+    position: absolute;
+    top: 60px;
+}
+nav a{
+    text-decoration: none;
+
+}
+
+.link{ 
+    color: #f4f4f9;
+    padding: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+    transition: all .2s linear;
+    border-bottom: 2px solid rgba(51, 51, 51, 0.527);
+    opacity: 0;
+    margin-top: 200px;
+}
+
+.link:hover{
+    background-color: #ffd000;
+    color: black;
+}
+
+#check:checked  ~ .barra{
+    transform: translateX(300px);
+}
+
+#check:checked  ~ .barra nav a .link{
+    opacity: 1;
+    margin-top: 0;
+    transition-delay: .2s;
+}
+
+.titulo{
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    text-align: center;
+}
+
+.titulocent{
+    color: white;
+    font-family: Philosopher;
+    font-size: 60px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.txtcent{
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 62px;
+    text-align: center;
+    margin-top: 90px;
+    margin-left: -350px;
+}
+
+.traço{
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 25px;
+    text-align: center;
+    margin-left: 1080px;
+    margin-bottom: -50px;
+    width: 90px;
+}
+
+.txtcent2{
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 70px;
+    text-align: center;
+    margin-left: -20px;
+
+}
+
+.lateral{
+    background-color: #BF38B2;    
+    height: 250px;
+    margin-left: 75% ;
+    width: 190px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 4px 3px #999;
+}
+
+.lateral img{
+    box-shadow: 3px 3px 4px 3px #666;
+    height: 60px;
+    margin-top: 15px;
+    margin-left: 65px;
+}
+
+/* RODAPÉ DO SITE */
+
+.rodape{
+    background-color: #292829   ;
+    height:410px ;
+    margin-top: 40px;
+    margin-left: -10px;
+    margin-bottom: -20px;
+    margin-right: px;
+}
+.container_rodape{
+    display: flex;
+}
+
+
+.container_rodape p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    
+}
+
+.parte01{
+    /* background-color: yellow; */
+    margin-left: 40px;
+    width: 200px;
+    text-align: center;
+    margin-top: 20PX;
+}
+
+.parte02{
+    /* background-color: green; */
+    margin-left: 80px;
+    width: 200px;
+    text-align: center;
+    margin-top: 20PX;
+}
+
+.parte03{
+    /* background-color: red; */
+    margin-left: 100px;
+    width: 200px;
+    text-align: center;
+    margin-top: 20PX;
+}
+
+.parte04{
+    /* background-color: blue; */
+    margin-left: 100px;
+    width: 200px;
+    text-align: center;
+    margin-top: 20PX;
+}
+
+.parte05{
+    /* background-color: cyan; */
+    margin-left: 80px;
+    width: 200px;
+    text-align: center;
+    margin-top: 20PX;
+}
+
+.parte01 h4{
+    margin-bottom: 10px;
+    text-decoration: underline;
+    font-size: 23px;
+    color: rgba(191, 56, 178, 0.74);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 56px;
+    text-align: center;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+}
+
+.parte02 h4{
+    margin-bottom: 10px;
+    text-decoration: underline;
+    font-size: 23px;
+    color: rgba(191, 56, 178, 0.74);
+    font-family: Red Verdana, Geneva, Tahoma, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 56px;
+    text-align: center;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+}
+
+.parte03 h4{
+    margin-bottom: 10px;
+    text-decoration: underline;
+    font-size: 23px;
+    color: rgba(191, 56, 178, 0.74);
+    font-family: Red Verdana, Geneva, Tahoma, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 56px;
+    text-align: center;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+}
+
+.parte04 h4{
+    margin-bottom: 10px;
+    text-decoration: underline;
+    font-size: 23px;
+    color: rgba(191, 56, 178, 0.74);
+    font-family: Red Verdana, Geneva, Tahoma, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 56px;
+    text-align: center;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+}
+
+.parte05 h4{
+    margin-bottom: 10px;
+    text-decoration: underline;
+    font-size: 23px;
+    color: rgba(191, 56, 178, 0.74);
+    font-family: Red Verdana, Geneva, Tahoma, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 56px;
+    text-align: center;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+}
+
+.parte01 p{
+    color: white;
+    padding-top: 10px;
+    
+}
+
+.parte02 p{
+    color: white;
+    padding-top: 10px;
+}
+
+.parte03 p{
+    color: white;
+    padding-top: 10px;
+}
+
+.parte04 p{
+    color: white;
+    padding-top: 10px;
+}
+
+.parte05 p{
+    color: white;
+    padding-top: 10px;
+}
+
+.frase_final{
+    text-align: center;
+    margin-top: 10px;
+}
+
+.frase_final h1{
+    color: rgba(253, 200, 24, 0.67);
+    font-family: Hat Display;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 66px;
+    text-align: center;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+}
+
+.imagens_rodape{
+    text-align: center;
+    
+}
+
+.imagens_rodape img{
+    height: 45px;
+    margin:7px;
+    margin-top: 30PX;
+}
